@@ -1,0 +1,39 @@
+{
+  "name": "remap-istanbul-test",
+  "version": "1.0.0",
+  "description": "Simple test of remap-istanbul",
+  "keywords": [
+    "remap",
+    "istanbul",
+    "test",
+    "source",
+    "maps",
+    "sourcemaps",
+    "nyc",
+    "minified"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "nyc-instrument": "nyc instrument vendor/underscore-min.js instrumented",
+    "nyc-report": "nyc report --reporter=html --report-dir=nyc-report --temp-directory=./coverage",
+    "remap-istanbul-report": "remap-istanbul -i ./coverage/coverage.json -o remap-istanbul-report -t html",
+    "run-test": "node src/test.js",
+    "test": "npm run nyc-instrument && npm run run-test && npm run nyc-report && npm run remap-istanbul-report"
+  },
+  "author": "Paul Grime <gitgrimbo@gmail.com> (https://github.com/gitgrimbo)",
+  "license": "MIT",
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "nyc": "^8.3.0",
+    "remap-istanbul": "^0.6.4"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitgrimbo/remap-istanbul-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gitgrimbo/remap-istanbul-test/issues"
+  },
+  "homepage": "https://github.com/gitgrimbo/remap-istanbul-test#readme"
+}

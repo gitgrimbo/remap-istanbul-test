@@ -1,0 +1,13 @@
+node_modules/
+
+# nyc instrumented code
+instrumented/
+
+# nyc report output
+nyc-report/
+
+# remap-istanbul report output
+remap-istanbul-report/
+
+# test coverage output
+coverage.json
